@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>“拼出”offer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" name="viewport" content="width=1200px, initial-scale=1.0,user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="2048.css" />
+    <script type="text/javascript" src="alert.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="support2048.js"></script>
+    <script type="text/javascript" src="showanimation2048.js"></script>
+    <script type="text/javascript" src="main2048.js"></script>
+</head>
+
+<body>
+    <div id="left">
+        <header>
+            <h1 style="margin-top:40px;margin-bottom: 40px; color:#664325">“拼出”offer</h1>
+            <a href="javascript:newgame();" id="newgamebutton">New Game</a>
+            <div class="container-help">
+                <div class="wrap">
+                    <a href="javascript:askForHelp();" id="btn-help">HELP!!!</a>
+                    <div id="notify"><span class="mentor"></span><span class="description"></span></div>
+                </div>
+            </div>
+            <p class='score'>score : <span id="score">0</span></p>
+            <span class="timeBack">游戏结束倒计时</span>
+            <div class="time">
+                <span>0</span>
+                <span>0</span>
+                <span>:</span>
+                <span>0</span>
+                <span>0</span>
+                <span>:</span>
+                <span>0</span>
+                <span>0</span>
+            </div>
+            <div>
+                <div id="mianjing">面经：</div>
+                <div id="mianjingText">越努力，越幸运</div>
+            </div>
+        </header>
+        <div id="congrat"></div>
+
+    </div>
+
+    <div id="right">
+        <div id="grid-container">
+            <div class="grid-cell" id="grid-cell-0-0"></div>
+            <div class="grid-cell" id="grid-cell-0-1"></div>
+            <div class="grid-cell" id="grid-cell-0-2"></div>
+            <div class="grid-cell" id="grid-cell-0-3"></div>
+
+            <div class="grid-cell" id="grid-cell-1-0"></div>
+            <div class="grid-cell" id="grid-cell-1-1"></div>
+            <div class="grid-cell" id="grid-cell-1-2"></div>
+            <div class="grid-cell" id="grid-cell-1-3"></div>
+
+            <div class="grid-cell" id="grid-cell-2-0"></div>
+            <div class="grid-cell" id="grid-cell-2-1"></div>
+            <div class="grid-cell" id="grid-cell-2-2"></div>
+            <div class="grid-cell" id="grid-cell-2-3"></div>
+
+            <div class="grid-cell" id="grid-cell-3-0"></div>
+            <div class="grid-cell" id="grid-cell-3-1"></div>
+            <div class="grid-cell" id="grid-cell-3-2"></div>
+            <div class="grid-cell" id="grid-cell-3-3"></div>
+        </div>
+    </div>
+    <div id="modal_volume" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 0; z-index: 9999; display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td align="center">
+                    <div id="showimg" style="width: 900px; position: relative">
+                        <img src="logo.svg" /><a href="javascript:$('#modal_volume').fadeOut();newgame();" style="display: block; width: 45px; height: 45px; position: absolute; right: 11px; top: 10px; z-index: 2">关闭</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="toStudy" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 0; z-index: 9999; display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td align="center">
+                    <div id="showimg" style="width: 350px; position: relative">
+                        <img src="study.png" /><a href="javascript:$('#toStudy').fadeOut();" style="display: block;  position: absolute; right: 11px; top: -20px; z-index: 2">关闭</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
